@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Times New Roman", Times, serif;
+  src: local();
+}
+@import "tailwindcss";
+
+@theme {
+  --font-times: "Times New Roman", "sans-serif";
+}
+
+nav a.active {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #112127;
+  color: #339999;
+}
