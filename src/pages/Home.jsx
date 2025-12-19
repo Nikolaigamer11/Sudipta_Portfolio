@@ -64,14 +64,22 @@ function Home() {
             {/* DESKTOP VIEW: Show only first 2 */}
             {Book_ill.slice(0, 2).map((item) => (
               <div key={`desktop-${item.id}`} className="hidden md:block">
-                <ImageHoverCard image={item.image} to={item.link} />
+                <ImageHoverCard
+                  image={item.thumbnail}
+                  alt={item.title}
+                  to={item.link}
+                />
               </div>
             ))}
 
             {/* MOBILE VIEW: Show first 4 + See More Card */}
             {Book_ill.slice(0, 4).map((item) => (
               <div key={`mobile-${item.id}`} className="block md:hidden">
-                <ImageHoverCard image={item.image} to={item.link} />
+                <ImageHoverCard
+                  image={item.thumbnail}
+                  alt={item.title}
+                  to={item.link}
+                />
               </div>
             ))}
 
@@ -95,16 +103,24 @@ function Home() {
 
           <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
             {/* DESKTOP VIEW: Show only first 2 */}
-            {Book_ill.slice(0, 2).map((item) => (
+            {Other_ill.slice(0, 2).map((item) => (
               <div key={`desktop-${item.id}`} className="hidden md:block">
-                <ImageHoverCard image={item.image} to={item.link} />
+                <ImageHoverCard
+                  image={item.thumbnail}
+                  alt={item.title}
+                  to={item.link}
+                />
               </div>
             ))}
 
             {/* MOBILE VIEW: Show first 4 + See More Card */}
-            {Book_ill.slice(0, 4).map((item) => (
+            {Other_ill.slice(0, 4).map((item) => (
               <div key={`mobile-${item.id}`} className="block md:hidden">
-                <ImageHoverCard image={item.image} to={item.link} />
+                <ImageHoverCard
+                  image={item.thumbnail}
+                  alt={item.title}
+                  to={item.link}
+                />
               </div>
             ))}
 
@@ -128,16 +144,24 @@ function Home() {
 
           <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
             {/* DESKTOP VIEW: Show only first 2 */}
-            {Book_ill.slice(0, 2).map((item) => (
+            {Graph_ill.slice(0, 2).map((item) => (
               <div key={`desktop-${item.id}`} className="hidden md:block">
-                <ImageHoverCard image={item.image} to={item.link} />
+                <ImageHoverCard
+                  image={item.thumbnail}
+                  alt={item.title}
+                  to={item.link}
+                />
               </div>
             ))}
 
             {/* MOBILE VIEW: Show first 4 + See More Card */}
-            {Book_ill.slice(0, 4).map((item) => (
+            {Graph_ill.slice(0, 4).map((item) => (
               <div key={`mobile-${item.id}`} className="block md:hidden">
-                <ImageHoverCard image={item.image} to={item.link} />
+                <ImageHoverCard
+                  image={item.thumbnail}
+                  alt={item.title}
+                  to={item.link}
+                />
               </div>
             ))}
 
