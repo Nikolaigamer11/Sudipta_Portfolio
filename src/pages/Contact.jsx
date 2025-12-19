@@ -13,7 +13,7 @@ function Contact() {
     <main
       className="
         min-h-[calc(100vh-12rem)]
-        flex flex-col items-center gap-6
+        flex flex-col items-center
         p-4
         md:flex-row md:justify-around md:items-start
       "
@@ -21,14 +21,14 @@ function Contact() {
       {/* IMAGE */}
       <figure className="flex justify-center">
         <img
-          src="https://picsum.photos/200/200"
+          src="https://picsum.photos/200/400"
           alt="Portrait"
-          className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded-lg shadow-md"
+          className="w-full aspect-3/4 sm:w-full sm:aspect-3/4 object-cover rounded-lg shadow-md"
         />
       </figure>
 
       {/* CONTACT DETAILS */}
-      <section className="flex flex-col gap-3 text-gray-400 text-sm sm:text-base">
+      <section className="flex flex-col gap-3 text-gray-400 text-sm sm:text-base sm:py-8">
         <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-[#2f6b4e]">
           <FaPhoneSquareAlt className="text-gray-300 text-lg" />
           <a href="tel:+919874318987">+91 98743 18987</a>
