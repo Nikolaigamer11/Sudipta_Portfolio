@@ -1,9 +1,8 @@
-import React from "react";
 import { FaEnvelope, FaFacebook, FaLinkedin } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
 function Header() {
   return (
-    <header className="bg-gray-800 text-white pt-3">
+    <header className="bg-gray-800 text-white pt-1">
       {/* TOP BAR */}
       <div
         className="
@@ -16,21 +15,20 @@ function Header() {
         {/* LOGO */}
         <div className="text-lg md:text-xl font-bold text-center md:text-left">
           DasguptArts
+          <h3 className="text-xs  md:flex sm:text-sm md:text-base text-center">
+            Sudipta Dasgupta (Steve)
+          </h3>
         </div>
 
         {/* NAME + ICONS */}
         <div
           className="
-          md:flex hidden flex-col items-center gap-2
+          md:flex flex-col items-center gap-2
           sm:flex-row sm:gap-3
           md:justify-end
         "
         >
-          <h3 className="text-xs sm:text-sm md:text-base text-center">
-            Sudipta Dasgupta (Steve)
-          </h3>
-
-          <div className="flex gap-3 text-lg   md:text-xl">
+          <div className="flex justify-end gap-3 text-lg   md:text-xl">
             <a className="hover:text-gray-300" href="#">
               <FaEnvelope />
             </a>

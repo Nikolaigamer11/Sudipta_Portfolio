@@ -152,7 +152,7 @@ export const Painting = [
 export const Sets = [
   {
     id: 1,
-    thumbnail: "https://picsum.photos/390/420?random=301",
+    thumbnail: "https://picsum.photos/210/120?random=301",
     fullRes: "https://picsum.photos/1100/900?random=301",
     link: "/Props",
     title: "Prop One",

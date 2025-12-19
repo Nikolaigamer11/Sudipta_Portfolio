@@ -1,16 +1,17 @@
 import React from "react";
 import Gallery from "../components/Gallery";
 import { Graph_ill } from "../components/images";
+import IllHeader from "../components/Ill_header";
 
 function GraphicIll() {
   return (
-    <main>
-      <div className="bg-gray-100 min-h-screen py-10">
-        <h1 className="text-center text-4xl font-bold mb-10">
-          Please Click On a Image to get a Larger View
-        </h1>
-        <Gallery images={Graph_ill} />
-      </div>
+    <main className=" min-h-screen py-10">
+      <IllHeader
+        p_img="https://picsum.photos/400/300?random=102"
+        header="Graphic Design"
+        parag="My focus of the study was 'Applied Art', also known as 'Graphic Design'. These artworks were created for hoardings, posters, POS designs, cards, CD covers, book covers, calendars, public relations, magazine ads, show cards, pavilion designs, brochures, flyers, catalogs, storyboards, etc."
+      />
+      <Gallery images={Graph_ill} />
     </main>
   );
 }

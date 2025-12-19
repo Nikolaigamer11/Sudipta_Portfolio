@@ -32,9 +32,12 @@ const Gallery = ({ images }) => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <div className="p-2 sm:p-4 max-w-7xl mx-auto mt-2">
+    <div className="  p-2 sm:p-4 max-w-7xl mx-auto mt-2">
+      <h4 className="text-gray-200 mb-2 italic">
+        Please Click on an image to get a larger view :-
+      </h4>
       {/* MASONRY GRID */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-2 sm:gap-4">
+      <div className="columns-2 lg:columns-3  gap-2 sm:gap-4">
         {images.map((img, index) => (
           <div key={img.id || index} className="break-inside-avoid">
             <img

@@ -10,21 +10,12 @@ const ImageHoverCard = ({ image, to, title }) => {
       to={to}
       className="group relative block h-0 pb-[75%] overflow-hidden rounded-xl"
     >
-      {/* Image */}
       <img
         src={image}
         alt={title}
-        className="absolute inset-0 w-full h-full object-cover
-                   transition-all duration-300 ease-in-out
-                   group-hover:blur-sm"
+        className="absolute inset-0 w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:blur-sm"
       />
-
-      {/* Overlay with text */}
-      <div
-        className="absolute inset-0 flex items-center justify-center
-                   bg-black/40 opacity-0 transition-opacity duration-300
-                   group-hover:opacity-100"
-      >
+      <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <span className="text-white text-lg font-semibold">See more</span>
       </div>
     </NavLink>
@@ -34,7 +25,7 @@ const ImageHoverCard = ({ image, to, title }) => {
 function Home() {
   return (
     <main className="w-full mt-2 pt-8 pb-20 bg-gray-700">
-      <section className="flex mb-8">
+      <section className="flex flex-col items-center px-4 md:flex-row mb-8">
         <figure className="mx-4 my-2 flex-none">
           <img src="https://placehold.co/150x200" alt="self_portait" />
         </figure>
@@ -63,52 +54,102 @@ function Home() {
         <h3 className="text-3xl text-gray-200 text-center underline underline-offset-1">
           Works
         </h3>
+        {/* --------------------------- */}
         <div className="flex flex-col gap-2">
           <h5 className="text-xl text-gray-200 underline underline-offset-1">
             Book Illustrations :-{" "}
           </h5>
-          <div
-            className="
-grid grid-flow-col auto-cols-[minmax(260px,1fr)]
-    gap-6
-    overflow-x-auto no-scrollbar
-  "
-          >
+
+          <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
+            {/* DESKTOP VIEW: Show only first 2 */}
             {Book_ill.slice(0, 2).map((item) => (
-              <ImageHoverCard key={item.id} image={item.image} to={item.link} />
+              <div key={`desktop-${item.id}`} className="hidden md:block">
+                <ImageHoverCard image={item.image} to={item.link} />
+              </div>
             ))}
+
+            {/* MOBILE VIEW: Show first 4 + See More Card */}
+            {Book_ill.slice(0, 4).map((item) => (
+              <div key={`mobile-${item.id}`} className="block md:hidden">
+                <ImageHoverCard image={item.image} to={item.link} />
+              </div>
+            ))}
+
+            {/* MOBILE ONLY "SEE MORE" CARD */}
+            <NavLink
+              to="/Book_Illustrations"
+              className="md:hidden flex items-center justify-center min-w-65 aspect-4/3 bg-gray-800/50 rounded-xl border-2 border-dashed border-gray-600 hover:border-gray-400 transition-colors"
+            >
+              <span className="text-gray-300 font-medium">
+                See all illustrations →
+              </span>
+            </NavLink>
           </div>
         </div>
+        {/* -------------------------------------*/}
+
         <div className="flex flex-col gap-2">
           <h5 className="text-xl text-gray-200 underline underline-offset-1">
             Other Illustrations :-{" "}
           </h5>
-          <div
-            className="
-grid grid-flow-col auto-cols-[minmax(260px,1fr)]
-    gap-6
-    overflow-x-auto no-scrollbar
-  "
-          >
-            {Other_ill.slice(0, 2).map((item) => (
-              <ImageHoverCard key={item.id} image={item.image} to={item.link} />
+
+          <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
+            {/* DESKTOP VIEW: Show only first 2 */}
+            {Book_ill.slice(0, 2).map((item) => (
+              <div key={`desktop-${item.id}`} className="hidden md:block">
+                <ImageHoverCard image={item.image} to={item.link} />
+              </div>
             ))}
+
+            {/* MOBILE VIEW: Show first 4 + See More Card */}
+            {Book_ill.slice(0, 4).map((item) => (
+              <div key={`mobile-${item.id}`} className="block md:hidden">
+                <ImageHoverCard image={item.image} to={item.link} />
+              </div>
+            ))}
+
+            {/* MOBILE ONLY "SEE MORE" CARD */}
+            <NavLink
+              to="/Other_Illustrations"
+              className="md:hidden flex items-center justify-center min-w-65 aspect-4/3 bg-gray-800/50 rounded-xl border-2 border-dashed border-gray-600 hover:border-gray-400 transition-colors"
+            >
+              <span className="text-gray-300 font-medium">
+                See all illustrations →
+              </span>
+            </NavLink>
           </div>
         </div>
+
+        {/* ------------------------------------ */}
         <div className="flex flex-col gap-2">
           <h5 className="text-xl text-gray-200 underline underline-offset-1">
-            Graphic Designs :-{" "}
+            Graphic_Illustrations:-{" "}
           </h5>
-          <div
-            className="
-grid grid-flow-col auto-cols-[minmax(260px,1fr)]
-    gap-6
-    overflow-x-auto no-scrollbar
-  "
-          >
-            {Graph_ill.slice(0, 2).map((item) => (
-              <ImageHoverCard key={item.id} image={item.image} to={item.link} />
+
+          <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
+            {/* DESKTOP VIEW: Show only first 2 */}
+            {Book_ill.slice(0, 2).map((item) => (
+              <div key={`desktop-${item.id}`} className="hidden md:block">
+                <ImageHoverCard image={item.image} to={item.link} />
+              </div>
             ))}
+
+            {/* MOBILE VIEW: Show first 4 + See More Card */}
+            {Book_ill.slice(0, 4).map((item) => (
+              <div key={`mobile-${item.id}`} className="block md:hidden">
+                <ImageHoverCard image={item.image} to={item.link} />
+              </div>
+            ))}
+
+            {/* MOBILE ONLY "SEE MORE" CARD */}
+            <NavLink
+              to="/Graphic_Illustrations"
+              className="md:hidden flex items-center justify-center min-w-65 aspect-4/3 bg-gray-800/50 rounded-xl border-2 border-dashed border-gray-600 hover:border-gray-400 transition-colors"
+            >
+              <span className="text-gray-300 font-medium">
+                See all illustrations →
+              </span>
+            </NavLink>
           </div>
         </div>
       </section>

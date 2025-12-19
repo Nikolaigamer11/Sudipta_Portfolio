@@ -12,6 +12,8 @@ function App() {
         className="
           mx-auto
           w-full
+          text-sm
+          md:text-xl
           max-w-screen-xl
           px-2 sm:px-4 md:px-6
         "

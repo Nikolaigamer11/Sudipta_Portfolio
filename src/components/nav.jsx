@@ -22,7 +22,10 @@ function Nav() {
         <span className="md:hidden text-lg">MENU</span>
 
         {/* HAMBURGER */}
-        <button className="md:hidden text-xl" onClick={() => setOpen(!open)}>
+        <button
+          className="md:hidden hover:bg-[#418eb7] bg-[#265467] p-2 rounded-lg text-xl"
+          onClick={() => setOpen(!open)}
+        >
           ☰
         </button>
 
