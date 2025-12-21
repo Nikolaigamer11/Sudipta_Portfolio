@@ -29,34 +29,46 @@ function Contact() {
 
       {/* CONTACT DETAILS */}
       <section className="flex flex-col gap-3 text-gray-400 text-sm sm:text-base py-8">
-        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-[#2f6b4e]">
+        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-white">
           <FaPhoneSquareAlt className="text-gray-300 text-lg" />
-          <a href="tel:+918420721157">+91 84207 21157</a>
+          <a target="_blank" href="tel:+918420721157">
+            +91 84207 21157
+          </a>
         </p>
 
-        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-[#2f6b4e] break-all">
+        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-white break-all">
           <FaEnvelope className="text-gray-300 text-lg" />
-          <a href="mailto:sudiptarts@gmail.com">sudiptarts@gmail.com</a>
+          <a target="_blank" href="mailto:sudiptarts@gmail.com">
+            sudiptarts@gmail.com
+          </a>
         </p>
 
-        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-[#2f6b4e]">
+        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-white">
           <FaLinkedin className="text-gray-300 text-lg" />
-          <a href="https://www.linkedin.com/in/dasguptarts">dasguptarts</a>
+          <a target="_blank" href="https://www.linkedin.com/in/dasguptarts">
+            dasguptarts
+          </a>
         </p>
 
-        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-[#2f6b4e]">
+        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-white">
           <FaFacebookSquare className="text-gray-300 text-lg" />
-          <a href="https://www.facebook.com/dasguptarts">dasguptarts</a>
+          <a target="_blank" href="https://www.facebook.com/dasguptarts">
+            dasguptarts
+          </a>
         </p>
 
-        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-[#2f6b4e]">
+        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-white">
           <FaSquareXTwitter className="text-gray-300 text-lg" />
-          <a href="https://twitter.com/dasguptarts">@dasguptarts</a>
+          <a target="_blank" href="https://twitter.com/dasguptarts">
+            @dasguptarts
+          </a>
         </p>
 
-        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-[#2f6b4e]">
+        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-white">
           <FaInstagramSquare className="text-gray-300 text-lg" />
-          <a href="https://www.instagram.com/dasguptarts/">dasguptarts</a>
+          <a target="_blank" href="https://www.instagram.com/dasguptarts/">
+            dasguptarts
+          </a>
         </p>
       </section>
     </main>

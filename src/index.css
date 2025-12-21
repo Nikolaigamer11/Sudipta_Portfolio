@@ -11,9 +11,19 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-}
-@theme {
-  --font-times: "Times New Roman", "sans-serif";
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#1e2939] shadow-lg;
+  }
+  ::-webkit-scrollbar {
+    @apply w-1 bg-[#1e2939];
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-[#5992b2] /*color trackbar*/;
+  }
+
+  @theme {
+    --font-times: "Times New Roman", "sans-serif";
+  }
 }
 
 nav a.active {

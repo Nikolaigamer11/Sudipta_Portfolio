@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-gray-800 min-h-screen w-full font-times">
+    <div className="bg-gray-800 min-h-screen w-full font-times ">
       {/* CONTENT WRAPPER */}
       <div
         className="
@@ -18,9 +18,9 @@ function App() {
           px-2 sm:px-4 md:px-6
         "
       >
-        <Header />
-
         <BrowserRouter>
+          <Header />
+
           <Nav />
         </BrowserRouter>
 

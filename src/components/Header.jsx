@@ -1,5 +1,5 @@
 import { FaEnvelope, FaFacebook, FaLinkedin } from "react-icons/fa";
-
+import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <header className="bg-gray-800 text-white pt-1">
@@ -13,12 +13,14 @@ function Header() {
       "
       >
         {/* LOGO */}
-        <div className="text-lg md:text-xl font-bold text-center md:text-left">
-          DasguptArts
-          <h3 className="text-xs  md:flex sm:text-sm md:text-base text-center">
-            Sudipta Dasgupta (Steve)
-          </h3>
-        </div>
+        <NavLink to="/">
+          <div className="text-lg md:text-xl font-bold text-center md:text-left">
+            DasguptArts
+            <h3 className="text-xs  md:flex sm:text-sm md:text-base text-center">
+              Sudipta Dasgupta (Steve)
+            </h3>
+          </div>
+        </NavLink>
 
         {/* NAME + ICONS */}
         <div
@@ -29,13 +31,25 @@ function Header() {
         "
         >
           <div className="flex justify-end gap-3 text-lg   md:text-xl">
-            <a className="hover:text-gray-300" href="#">
+            <a
+              target="_blank"
+              className="hover:text-[#339999]"
+              href="mailto:sudiptarts@gmail.com"
+            >
               <FaEnvelope />
             </a>
-            <a className="hover:text-gray-300" href="#">
+            <a
+              target="_blank"
+              className="hover:text-[#339999]"
+              href="https://www.facebook.com/dasguptarts"
+            >
               <FaFacebook />
             </a>
-            <a className="hover:text-gray-300" href="#">
+            <a
+              target="_blank"
+              className="hover:text-[#339999]"
+              href="https://www.linkedin.com/in/dasguptarts"
+            >
               <FaLinkedin />
             </a>
           </div>

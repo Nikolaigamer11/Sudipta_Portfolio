@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Routes, Route, NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Routes, Route, NavLink, useLocation } from "react-router-dom";
 import Home from "../pages/Home";
 import BookIll from "../pages/BookIll";
 import GraphicIll from "../pages/GraphicIll";
@@ -10,9 +10,17 @@ import OIll from "../pages/OIll";
 import E404 from "../pages/E404";
 
 function Nav() {
-  const [open, setOpen] = useState(false);
-
   const linkClass = "p-3 hover:bg-[#112127] hover:text-[#339999] block";
+  const [open, setOpen] = useState(false);
+  const PageTitle = ({ title }) => {
+    const location = useLocation();
+
+    useEffect(() => {
+      document.title = title;
+    }, [location, title]);
+
+    return null;
+  };
 
   return (
     <section>
@@ -31,7 +39,7 @@ function Nav() {
 
         {/* DESKTOP NAV */}
         <div className="hidden md:flex justify-evenly w-full">
-          <NavLink className={linkClass} to="/">
+          <NavLink className={linkClass} exact to="/">
             Home
           </NavLink>
           <NavLink className={linkClass} to="/Book_Illustrations">
@@ -43,8 +51,8 @@ function Nav() {
           <NavLink className={linkClass} to="/Graphic_Designs">
             Graphic Desings
           </NavLink>
-          <NavLink className={linkClass} to="/Painting">
-            Painting
+          <NavLink className={linkClass} to="/Paintings">
+            Paintings
           </NavLink>
           <NavLink className={linkClass} to="/Props">
             Prop & Set designs
@@ -57,12 +65,12 @@ function Nav() {
 
       {/* MOBILE SIDE MENU */}
       <div
-        className={`fixed top-0 left-0 h-full w-56 bg-[#0a161b] text-white transform
-        ${open ? "translate-x-0" : "-translate-x-full"}
+        className={`fixed  top-0 left-0 h-full w-56 bg-[#0a161b] text-white transform
+        ${open ? "translate-x-0 shadow-2xl shadow-black" : "-translate-x-full "}
         transition-transform duration-300 ease-in-out md:hidden z-50`}
       >
         <button
-          className="p-4 text-right w-full"
+          className="p-4 text-right w-full hover:cursor-pointer hover:text-[#339999]"
           onClick={() => setOpen(false)}
         >
           ✕
@@ -90,12 +98,12 @@ function Nav() {
           className={linkClass}
           to="/Graphic_Designs"
         >
-          Graphic Illustrations
+          Graphic Designs
         </NavLink>
         <NavLink
           onClick={() => setOpen(false)}
           className={linkClass}
-          to="/Painting"
+          to="/Paintings"
         >
           Painting
         </NavLink>
@@ -117,14 +125,141 @@ function Nav() {
 
       {/* ROUTES */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="Book_Illustrations" element={<BookIll />} />
-        <Route path="/Other_Illustrations" element={<OIll />} />
-        <Route path="/Graphic_Designs" element={<GraphicIll />} />
-        <Route path="/Painting" element={<PaintingIll />} />
-        <Route path="/Props" element={<Props />} />
-        <Route path="/Contact_me" element={<Contact />} />
-        <Route path="*" element={<E404 />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Home" />
+              <Home />
+            </>
+          }
+        />
+        <Route
+          path="/Home"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Home" />
+              <Home />
+            </>
+          }
+        />
+        <Route
+          path="/Book_Illustrations"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Book Illustrations " />
+              <BookIll />
+            </>
+          }
+        />
+        <Route
+          path="/Book_Illustration"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Book Illustrations " />
+              <BookIll />
+            </>
+          }
+        />
+        <Route
+          path="/Other_Illustrations"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Other Illustrations" />
+              <OIll />
+            </>
+          }
+        />
+        <Route
+          path="/Other_Illustration"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Other Illustrations" />
+              <OIll />
+            </>
+          }
+        />
+        <Route
+          path="/Graphic_Designs"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Graphic Designs" />
+              <GraphicIll />
+            </>
+          }
+        />
+        <Route
+          path="/Graphic_Design"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Graphic Designs" />
+              <GraphicIll />
+            </>
+          }
+        />
+        <Route
+          path="/Paintings"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Paintings" />
+              <PaintingIll />
+            </>
+          }
+        />
+        <Route
+          path="/Painting"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Paintings" />
+              <PaintingIll />
+            </>
+          }
+        />
+        <Route
+          path="/Props"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Props & Set design" />
+              <Props />
+            </>
+          }
+        />
+        <Route
+          path="/Prop"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Props & Set design" />
+              <Props />
+            </>
+          }
+        />
+        <Route
+          path="/Contact_me"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Contact Me" />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/Contact"
+          element={
+            <>
+              <PageTitle title="DasguptArts- Contact Me" />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <>
+              <PageTitle title="DasguptArts-" />
+              <E404 />
+            </>
+          }
+        />
       </Routes>
     </section>
   );
