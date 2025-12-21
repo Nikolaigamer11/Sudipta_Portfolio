@@ -40,14 +40,14 @@ function Nav() {
           <NavLink className={linkClass} to="/Other_Illustrations">
             Other Illustrations
           </NavLink>
-          <NavLink className={linkClass} to="/Graphic_Illustrations">
-            Graphic Illustrations
+          <NavLink className={linkClass} to="/Graphic_Designs">
+            Graphic Desings
           </NavLink>
           <NavLink className={linkClass} to="/Painting">
             Painting
           </NavLink>
           <NavLink className={linkClass} to="/Props">
-            Props
+            Prop & Set designs
           </NavLink>
           <NavLink className={linkClass} to="/Contact_me">
             Contact Me
@@ -88,7 +88,7 @@ function Nav() {
         <NavLink
           onClick={() => setOpen(false)}
           className={linkClass}
-          to="/Graphic_Illustrations"
+          to="/Graphic_Designs"
         >
           Graphic Illustrations
         </NavLink>
@@ -120,7 +120,7 @@ function Nav() {
         <Route path="/" element={<Home />} />
         <Route path="Book_Illustrations" element={<BookIll />} />
         <Route path="/Other_Illustrations" element={<OIll />} />
-        <Route path="/Graphic_Illustrations" element={<GraphicIll />} />
+        <Route path="/Graphic_Designs" element={<GraphicIll />} />
         <Route path="/Painting" element={<PaintingIll />} />
         <Route path="/Props" element={<Props />} />
         <Route path="/Contact_me" element={<Contact />} />

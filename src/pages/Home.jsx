@@ -1,7 +1,11 @@
 import React from "react";
-import { Book_ill } from "../components/images";
-import { Graph_ill } from "../components/images";
-import { Other_ill } from "../components/images";
+import {
+  Book_ill,
+  Other_ill,
+  Graph_ill,
+  Painting,
+  Sets,
+} from "../components/images";
 import { NavLink } from "react-router-dom";
 
 const ImageHoverCard = ({ image, to, title }) => {
@@ -30,8 +34,8 @@ function Home() {
           <img src="https://placehold.co/150x200" alt="self_portait" />
         </figure>
         <section className="text-left my-auto text-[#339999]">
-          <h3 className=" text-[#5f92b2] font-bold">
-            <q className="italic  text-gray-300 ">
+          <h3 className=" text-[#5f92b2] font-bold text-2xl">
+            <q className="italic text-gray-300 ">
               Art is a lie that makes us realize truth
             </q>
             -Pablo Picasso
@@ -139,7 +143,7 @@ function Home() {
         {/* ------------------------------------ */}
         <div className="flex flex-col gap-2">
           <h5 className="text-xl text-gray-200 underline underline-offset-1">
-            Graphic_Illustrations:-{" "}
+            Graphic Designs:-{" "}
           </h5>
 
           <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
@@ -176,6 +180,91 @@ function Home() {
             </NavLink>
           </div>
         </div>
+        {/* ---------------------------------------------------------------------- */}
+
+        <div className="flex flex-col gap-2">
+          <h5 className="text-xl text-gray-200 underline underline-offset-1">
+            Paintings :-
+          </h5>
+
+          <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
+            {/* DESKTOP VIEW: Show only first 2 */}
+            {Painting.slice(0, 2).map((item) => (
+              <div key={`desktop-${item.id}`} className="hidden md:block">
+                <ImageHoverCard
+                  image={item.thumbnail}
+                  alt={item.title}
+                  to={item.link}
+                />
+              </div>
+            ))}
+
+            {/* MOBILE VIEW: Show first 4 + See More Card */}
+            {Painting.slice(0, 4).map((item) => (
+              <div key={`mobile-${item.id}`} className="block md:hidden">
+                <ImageHoverCard
+                  image={item.thumbnail}
+                  alt={item.title}
+                  to={item.link}
+                />
+              </div>
+            ))}
+
+            {/* MOBILE ONLY "SEE MORE" CARD */}
+            <NavLink
+              to="/Sets"
+              className="md:hidden flex items-center justify-center min-w-65 aspect-4/3 bg-gray-800/50 rounded-xl border-2 border-dashed border-gray-600 hover:border-gray-400 transition-colors"
+            >
+              <span className="text-gray-300 font-medium">
+                See all illustrations →
+              </span>
+            </NavLink>
+          </div>
+        </div>
+
+        {/* -------------------------------------------------------------------- */}
+
+        <div className="flex flex-col gap-2">
+          <h5 className="text-xl text-gray-200 underline underline-offset-1">
+            Prop & Set Desings :-
+          </h5>
+
+          <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
+            {/* DESKTOP VIEW: Show only first 2 */}
+            {Sets.slice(0, 2).map((item) => (
+              <div key={`desktop-${item.id}`} className="hidden md:block">
+                <ImageHoverCard
+                  image={item.thumbnail}
+                  alt={item.title}
+                  to={item.link}
+                />
+              </div>
+            ))}
+
+            {/* MOBILE VIEW: Show first 4 + See More Card */}
+            {Sets.slice(0, 4).map((item) => (
+              <div key={`mobile-${item.id}`} className="block md:hidden">
+                <ImageHoverCard
+                  image={item.thumbnail}
+                  alt={item.title}
+                  to={item.link}
+                />
+              </div>
+            ))}
+
+            {/* MOBILE ONLY "SEE MORE" CARD */}
+            <NavLink
+              to="/Props"
+              className="md:hidden flex items-center justify-center min-w-65 aspect-4/3 bg-gray-800/50 rounded-xl border-2 border-dashed border-gray-600 hover:border-gray-400 transition-colors"
+            >
+              <span className="text-gray-300 font-medium">
+                See all illustrations →
+              </span>
+            </NavLink>
+          </div>
+        </div>
+
+        {/* --------------------------------------------------------------------------- */}
       </section>
 
       <section className="p-5 text-gray-200">

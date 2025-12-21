@@ -28,15 +28,10 @@ function Contact() {
       </figure>
 
       {/* CONTACT DETAILS */}
-      <section className="flex flex-col gap-3 text-gray-400 text-sm sm:text-base sm:py-8">
+      <section className="flex flex-col gap-3 text-gray-400 text-sm sm:text-base py-8">
         <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-[#2f6b4e]">
           <FaPhoneSquareAlt className="text-gray-300 text-lg" />
-          <a href="tel:+919874318987">+91 98743 18987</a>
-        </p>
-
-        <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-[#2f6b4e]">
-          <FaPhoneSquareAlt className="text-gray-300 text-lg" />
-          <a href="tel:+919874318987">+91 98743 18987</a>
+          <a href="tel:+918420721157">+91 84207 21157</a>
         </p>
 
         <p className="flex items-center gap-3 font-semibold text-[#339999] hover:text-[#2f6b4e] break-all">
