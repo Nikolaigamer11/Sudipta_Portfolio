@@ -5,7 +5,7 @@ import { GrLinkNext } from "react-icons/gr";
 const Gallery = ({ images }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [isHighResLoaded, setIsHighResLoaded] = useState(false);
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isOpen) return;
@@ -18,6 +18,7 @@ const Gallery = ({ images }) => {
   }, [isOpen]);
 
   const openModal = (index) => {
+    setIsHighResLoaded(false);
     setCurrentIndex(index);
     setIsOpen(true);
     document.body.style.overflow = "hidden";
@@ -28,10 +29,15 @@ const Gallery = ({ images }) => {
     document.body.style.overflow = "auto";
   };
 
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length);
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+    setIsHighResLoaded(false);
+  };
 
-  const prevSlide = () =>
+  const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    setIsHighResLoaded(false);
+  };
 
   return (
     <div className="  p-2 sm:p-4 max-w-7xl mx-auto mt-2">
@@ -73,14 +79,27 @@ const Gallery = ({ images }) => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* IMAGE */}
+            {/* Replace the <img> at line 68 with this block */}
             <div className="relative overflow-hidden rounded-lg shadow-2xl">
+              {/* The Blurry Placeholder (Thumbnail) */}
+              {!isHighResLoaded && (
+                <img
+                  src={images[currentIndex].thumbnail}
+                  className="absolute inset-0 w-full h-full object-contain scale-110"
+                  alt="loading"
+                />
+              )}
+
+              {/* The High-Res Image */}
               <img
                 src={images[currentIndex].fullRes}
                 alt={images[currentIndex].title}
                 referrerPolicy="no-referrer"
-                className="max-w-full max-h-[70vh] sm:max-h-[80vh] object-contain select-none"
+                onLoad={() => setIsHighResLoaded(true)} // This triggers the swap
+                className={`max-w-full max-h-[70vh] sm:max-h-[80vh] object-contain select-none transition-opacity duration-500 ${
+                  isHighResLoaded ? "opacity-100" : "opacity-0"
+                }`}
               />
-
               {/* DESKTOP CLICK ZONES */}
               <div className="absolute inset-0 hidden md:flex md:items-center md:justify-center h-full ">
                 <div

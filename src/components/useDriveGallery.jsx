@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 
-const API_KEY = "AIzaSyAALRgwr9ULa7zxWY64Ocmcho1ttGyZzrs";
-const PARENT_FOLDER_ID = "13av491siGqdy5QSU6oIkPudkJ_zt5zZw";
+const drive = "AIzaSyAALRgwr9ULa7zxWY64Ocmcho1ttGyZzrs";
+const folder_name = "13av491siGqdy5QSU6oIkPudkJ_zt5zZw";
 
 export const useDriveGallery = (folderName = null) => {
   const [data, setData] = useState([]);
@@ -25,11 +25,11 @@ export const useDriveGallery = (folderName = null) => {
 
       try {
         // 2. Fetch Subfolders from Parent
-        const folderQuery = `'${PARENT_FOLDER_ID}' in parents and mimeType = 'application/vnd.google-apps.folder'`;
+        const folderQuery = `'${folder_name}' in parents and mimeType = 'application/vnd.google-apps.folder'`;
         const folderRes = await fetch(
           `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(
             folderQuery
-          )}&key=${API_KEY}`
+          )}&key=${drive}`
         );
         const folderData = await folderRes.json();
 
@@ -47,7 +47,7 @@ export const useDriveGallery = (folderName = null) => {
             const imgRes = await fetch(
               `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(
                 imgQuery
-              )}&fields=files(id,name,thumbnailLink)&key=${API_KEY}`
+              )}&fields=files(id,name,thumbnailLink)&key=${drive}`
             );
             const imgData = await imgRes.json();
 
