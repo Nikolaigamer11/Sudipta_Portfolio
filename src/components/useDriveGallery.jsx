@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 
-const API_KEY = "AIzaSyAALRgwr9ULa7zxWY64Ocmcho1ttGyZzrs";
-const PARENT_FOLDER_ID = "13av491siGqdy5QSU6oIkPudkJ_zt5zZw";
+const API_KEY = API_KEY;
+const PARENT_FOLDER_ID = FOLDER_ID;
 
 export const useDriveGallery = (folderName = null) => {
   const [data, setData] = useState([]);
