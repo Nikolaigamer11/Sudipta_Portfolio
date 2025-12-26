@@ -43,8 +43,6 @@ const Gallery = ({ images, txt }) => {
             <img
               src={img.thumbnail}
               alt={img.title}
-              loading="lazy"
-              referrerPolicy="no-referrer"
               onClick={() => openModal(index)}
               className="w-full mb-3 sm:mb-4 cursor-pointer transition-transform duration-150 hover:scale-[1.02] shadow-md hover:shadow-xl rounded"
             />
@@ -75,7 +73,6 @@ const Gallery = ({ images, txt }) => {
               <img
                 src={images[currentIndex].fullRes}
                 alt={images[currentIndex].title}
-                referrerPolicy="no-referrer"
                 className="max-w-full max-h-[70vh] sm:max-h-[80vh] object-contain select-none"
               />
 
