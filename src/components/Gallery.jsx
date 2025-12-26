@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { GrLinkPrevious } from "react-icons/gr";
 import { GrLinkNext } from "react-icons/gr";
-const Gallery = ({ images }) => {
+const Gallery = ({ images, txt }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -35,9 +35,7 @@ const Gallery = ({ images }) => {
 
   return (
     <div className="  p-2 sm:p-4 max-w-7xl mx-auto mt-2">
-      <h4 className="text-gray-200 mb-2 italic">
-        Please Click on an image to get a larger view :-
-      </h4>
+      <pre className="text-gray-200 mb-2 italic">{txt}</pre>
       {/* MASONRY GRID */}
       <div className="columns-2 lg:columns-3  gap-2 sm:gap-4">
         {images.map((img, index) => (

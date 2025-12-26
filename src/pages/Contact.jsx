@@ -21,7 +21,7 @@ function Contact() {
       {/* IMAGE */}
       <figure className="flex justify-center">
         <img
-          src="src/assets/images/self_potriat.jpg"
+          src="images/self_potriat.jpg"
           alt="Portrait"
           className="w-full aspect-3/4 sm:w-full sm:aspect-3/4 object-cover rounded-lg shadow-md"
         />

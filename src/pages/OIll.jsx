@@ -8,7 +8,7 @@ function OIll() {
       <IllHeader header="Illustrations for other purposes such as character designs, greeting cards, posters, cartoons, web pages, etc." />
       <Gallery
         images={Watercolor}
-        txt={`Please click the images to zoom  \nWater color paintings:- `}
+        txt={`Please click the images to zoom  \n Water color paintings:- `}
       />
       <Gallery images={character} txt="Charector Designs:-" />
       <Gallery images={custom_sketches} txt="Custom Sketches:-" />

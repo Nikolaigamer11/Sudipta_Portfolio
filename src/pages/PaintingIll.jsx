@@ -13,7 +13,10 @@ Acrylic, oil, watercolor and mixed media as well as I often used real elements s
 
 I also enjoy mural/wall art. So far I have painted murals in Chicago, IL , Alliance, OH and Brooklyn, NY.`}
       />
-      <Gallery images={Paintings} />
+      <Gallery
+        images={Paintings}
+        txt={`Please click on  the images to zoom\n Paintings:-`}
+      />
     </main>
   );
 }

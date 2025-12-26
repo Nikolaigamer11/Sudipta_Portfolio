@@ -31,7 +31,7 @@ function Home() {
     <main className="w-full mt-2 pt-8 pb-20 bg-gray-700">
       <section className="flex flex-col items-center px-4 md:flex-row mb-8">
         <figure className="mx-4 my-2 flex-none">
-          <img src="src\assets\images\self_potriat.jpg" alt="self portait" />
+          <img src="images\self_potriat.jpg" alt="self portait" />
         </figure>
         <section className="text-left my-auto text-[#339999]">
           <h3 className=" text-[#5f92b2] font-bold text-2xl">
@@ -66,7 +66,7 @@ function Home() {
 
           <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
             {/* DESKTOP VIEW: Show only first 2 */}
-            {Traditional.slice(0, 2).map((item) => (
+            {Traditional.slice(0, 3).map((item) => (
               <div key={`desktop-${item.id}`} className="hidden md:block">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -77,7 +77,7 @@ function Home() {
             ))}
 
             {/* MOBILE VIEW: Show first 4 + See More Card */}
-            {Traditional.slice(0, 4).map((item) => (
+            {Traditional.slice(0, 6).map((item) => (
               <div key={`mobile-${item.id}`} className="block md:hidden">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -107,7 +107,7 @@ function Home() {
 
           <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
             {/* DESKTOP VIEW: Show only first 2 */}
-            {Watercolor.slice(0, 2).map((item) => (
+            {Watercolor.slice(0, 3).map((item) => (
               <div key={`desktop-${item.id}`} className="hidden md:block">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -118,7 +118,7 @@ function Home() {
             ))}
 
             {/* MOBILE VIEW: Show first 4 + See More Card */}
-            {Watercolor.slice(0, 4).map((item) => (
+            {Watercolor.slice(0, 6).map((item) => (
               <div key={`mobile-${item.id}`} className="block md:hidden">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -148,7 +148,7 @@ function Home() {
 
           <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
             {/* DESKTOP VIEW: Show only first 2 */}
-            {Graphics.slice(0, 2).map((item) => (
+            {Graphics.slice(0, 3).map((item) => (
               <div key={`desktop-${item.id}`} className="hidden md:block">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -159,7 +159,7 @@ function Home() {
             ))}
 
             {/* MOBILE VIEW: Show first 4 + See More Card */}
-            {Graphics.slice(0, 4).map((item) => (
+            {Graphics.slice(0, 6).map((item) => (
               <div key={`mobile-${item.id}`} className="block md:hidden">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -189,7 +189,7 @@ function Home() {
 
           <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
             {/* DESKTOP VIEW: Show only first 2 */}
-            {Paintings.slice(0, 2).map((item) => (
+            {Paintings.slice(0, 3).map((item) => (
               <div key={`desktop-${item.id}`} className="hidden md:block">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -200,7 +200,7 @@ function Home() {
             ))}
 
             {/* MOBILE VIEW: Show first 4 + See More Card */}
-            {Paintings.slice(0, 4).map((item) => (
+            {Paintings.slice(0, 6).map((item) => (
               <div key={`mobile-${item.id}`} className="block md:hidden">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -231,7 +231,7 @@ function Home() {
 
           <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
             {/* DESKTOP VIEW: Show only first 2 */}
-            {Sets.slice(0, 2).map((item) => (
+            {Sets.slice(0, 3).map((item) => (
               <div key={`desktop-${item.id}`} className="hidden md:block">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -242,7 +242,7 @@ function Home() {
             ))}
 
             {/* MOBILE VIEW: Show first 4 + See More Card */}
-            {Sets.slice(0, 4).map((item) => (
+            {Sets.slice(0, 6).map((item) => (
               <div key={`mobile-${item.id}`} className="block md:hidden">
                 <ImageHoverCard
                   image={item.thumbnail}
