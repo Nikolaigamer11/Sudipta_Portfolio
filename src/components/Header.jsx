@@ -1,5 +1,6 @@
 import { FaEnvelope, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <header className="bg-gray-800 text-white pt-1">
@@ -60,18 +61,16 @@ function Header() {
       <picture className="block w-full rounded-t-lg overflow-hidden">
         <source
           media="(max-width: 350px)"
-          srcSet="src\assets\images\banner (Small).jpeg"
+          srcSet="..\images\banner (Small).jpeg"
         />
+
         <source
           media="(max-width: 650px)"
-          srcSet="src\assets\images\banner (Phone).jpeg"
+          srcSet="..\images\banner (Phone).jpeg"
         />
-        <source
-          media="(max-width: 1000px)"
-          srcSet="src\assets\images\banner.jpeg"
-        />
+        <source media="(max-width: 1000px)" srcSet="..\images\banner.jpeg" />
         <img
-          src="src\assets\images\banner.jpeg"
+          src="..\images\banner.jpeg"
           alt="Header Banner"
           className="w-full h-40 sm:h-50 md:h-65 object-cover"
         />

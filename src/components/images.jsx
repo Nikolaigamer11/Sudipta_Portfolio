@@ -27,67 +27,67 @@ const GRAPHIC_D = 92;
 
 const Traditional = createImageArray({
   count: TRADITIONAL_PAINTINGS,
-  basePath: "dist/assets/Book Illustrations/TraditionalManual",
+  basePath: "../Book Illustrations/TraditionalManual",
   prefix: "Traditional",
   link: "Book_Illustrations",
 });
 const Adult_book = createImageArray({
   count: ADULT_PAINTINGS,
-  basePath: "dist/assets/Book Illustrations/Adult_Books",
+  basePath: "../Book Illustrations/Adult_Books",
   prefix: "Adult Books",
   link: "Book_Illustrations",
 });
 const Comic = createImageArray({
   count: COMIC_PAINTINGS,
-  basePath: "dist/assets/Book Illustrations/Comic",
+  basePath: "../Book Illustrations/Comic",
   prefix: "Comic",
   link: "Book_Illustrations",
 });
 const Digital = createImageArray({
   count: DIGITAL_PAINTINGS,
-  basePath: "dist/assets/Book Illustrations/Digital",
+  basePath: "../Book Illustrations/Digital",
   prefix: "digital",
   link: "Book_Illustrations",
 });
 
 const character = createImageArray({
   count: CHARACTER_PAINTINGS,
-  basePath: "dist/assets/Other Illustrations/character illustrations",
+  basePath: "../Other Illustrations/character illustrations",
   prefix: "Charectors",
   link: "Other_Illustrations",
 });
 
 const custom_sketches = createImageArray({
   count: CUSTOM_PAINTINGS,
-  basePath: "dist/assets/Other Illustrations/Custom sketches",
+  basePath: "../Other Illustrations/Custom sketches",
   prefix: "Sketches",
   link: "Other_Illustrations",
 });
 
 const Watercolor = createImageArray({
   count: WATER_PAINTINGS,
-  basePath: "dist/assets/Other Illustrations/Watercolor Illustrations",
+  basePath: "../Other Illustrations/Watercolor Illustrations",
   prefix: "WaterColors",
   link: "Other_Illustrations",
 });
 
 const Paintings = createImageArray({
   count: PAINTING_NUM,
-  basePath: "dist/assets/Paintings",
+  basePath: "../Paintings",
   prefix: "Painting",
   link: "Painting",
 });
 
 const Sets = createImageArray({
   count: SET_NUM,
-  basePath: "dist/assets/Sets",
+  basePath: "../Sets",
   prefix: "Set Designs",
   link: "Painting",
 });
 
 const Graphics = createImageArray({
   count: GRAPHIC_D,
-  basePath: "dist/assets/Graphic Designs",
+  basePath: "../Graphic Designs",
   prefix: "Graphic Designs",
   link: "Graphic_Designs",
 });
