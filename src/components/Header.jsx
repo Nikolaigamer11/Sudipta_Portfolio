@@ -1,5 +1,5 @@
 import { FaEnvelope, FaFacebook, FaLinkedin } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <header className="bg-gray-800 text-white pt-1">
@@ -13,14 +13,14 @@ function Header() {
       "
       >
         {/* LOGO */}
-        <NavLink to="/">
+        <Link to="/">
           <div className="text-lg md:text-xl font-bold text-center md:text-left">
             DasguptArts
             <h3 className="text-xs  md:flex sm:text-sm md:text-base text-center">
               Sudipta Dasgupta (Steve)
             </h3>
           </div>
-        </NavLink>
+        </Link>
 
         {/* NAME + ICONS */}
         <div
