@@ -6,7 +6,10 @@ function Props() {
   return (
     <main className=" min-h-screen py-10">
       <IllHeader header="Set Designs for Theater and Film" />
-      <Gallery images={Sets} />
+      <Gallery
+        txt={`Please click on the images to zoom \nProp designs and set designs:- `}
+        images={Sets}
+      />
     </main>
   );
 }

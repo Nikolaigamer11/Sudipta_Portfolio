@@ -60,18 +60,18 @@ function Header() {
       <picture className="block w-full rounded-t-lg overflow-hidden">
         <source
           media="(max-width: 350px)"
-          srcSet="https://placehold.co/350x160"
+          srcSet="src\assets\images\banner (Small).jpeg"
         />
         <source
           media="(max-width: 650px)"
-          srcSet="https://placehold.co/650x180"
+          srcSet="src\assets\images\banner (Phone).jpeg"
         />
         <source
           media="(max-width: 1000px)"
-          srcSet="https://placehold.co/1080x220"
+          srcSet="src\assets\images\banner.jpeg"
         />
         <img
-          src="https://placehold.co/1200x400"
+          src="src\assets\images\banner.jpeg"
           alt="Header Banner"
           className="w-full h-40 sm:h-50 md:h-65 object-cover"
         />

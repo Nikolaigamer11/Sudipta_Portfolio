@@ -1,15 +1,17 @@
 import React from "react";
 import Gallery from "../components/Gallery";
-import { Other_ill } from "../components/images";
+import { character, custom_sketches, Watercolor } from "../components/images";
 import IllHeader from "../components/Ill_header";
 function OIll() {
   return (
     <main className=" min-h-screen py-10">
-      <IllHeader
-        p_img="https://picsum.photos/400/300?random=102"
-        header="Illustrations for other purposes such as character designs, greeting cards, posters, cartoons, web pages, etc."
+      <IllHeader header="Illustrations for other purposes such as character designs, greeting cards, posters, cartoons, web pages, etc." />
+      <Gallery
+        images={Watercolor}
+        txt={`Please click the images to zoom  \nWater color paintings:- `}
       />
-      <Gallery images={Other_ill} />
+      <Gallery images={character} txt="Charector Designs:-" />
+      <Gallery images={custom_sketches} txt="Custom Sketches:-" />
     </main>
   );
 }
