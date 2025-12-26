@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { IoCloseCircleOutline } from "react-icons/io5";
-import { GrLinkPrevious } from "react-icons/gr";
-import { GrLinkNext } from "react-icons/gr";
+
 const Gallery = ({ images }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,7 +44,6 @@ const Gallery = ({ images }) => {
               src={img.thumbnail}
               alt={img.title}
               loading="lazy"
-              referrerPolicy="no-referrer"
               onClick={() => openModal(index)}
               className="w-full mb-3 sm:mb-4 cursor-pointer transition-transform duration-150 hover:scale-[1.02] shadow-md hover:shadow-xl rounded"
             />
@@ -62,10 +59,10 @@ const Gallery = ({ images }) => {
         >
           {/* CLOSE BUTTON */}
           <button
-            className="fixed top-4 right-4 sm:top-6 sm:right-6 cursor-pointer text-white w-10 h-10   z-50 hover:text-gray-400"
+            className="fixed top-4 right-4 sm:top-6 sm:right-6 text-white text-4xl sm:text-5xl font-thin z-50 hover:text-gray-400"
             onClick={closeModal}
           >
-            <IoCloseCircleOutline className="text-6xl sm:text-4xl font-thin" />
+            &times;
           </button>
 
           <div
@@ -77,24 +74,13 @@ const Gallery = ({ images }) => {
               <img
                 src={images[currentIndex].fullRes}
                 alt={images[currentIndex].title}
-                referrerPolicy="no-referrer"
                 className="max-w-full max-h-[70vh] sm:max-h-[80vh] object-contain select-none"
               />
 
               {/* DESKTOP CLICK ZONES */}
-              <div className="absolute inset-0 hidden md:flex md:items-center md:justify-center h-full ">
-                <div
-                  className="w-1/2 flex h-full items-center cursor-pointer text-left text-white px-4 hover:inset-shadow-[30px_0_30px_-10px_rgba(0,0,0)]"
-                  onClick={prevSlide}
-                >
-                  <GrLinkPrevious />
-                </div>
-                <div
-                  className="w-1/2 flex h-full justify-end items-center text-white px-4 cursor-pointer hover:inset-shadow-[-30px_0_30px_-10px_rgba(0,0,0)]"
-                  onClick={nextSlide}
-                >
-                  <GrLinkNext />
-                </div>
+              <div className="absolute inset-0 hidden md:flex">
+                <div className="w-1/2 cursor-pointer" onClick={prevSlide} />
+                <div className="w-1/2 cursor-pointer" onClick={nextSlide} />
               </div>
             </div>
 
@@ -104,13 +90,13 @@ const Gallery = ({ images }) => {
                 onClick={prevSlide}
                 className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600"
               >
-                Prev
+                ‹ Prev
               </button>
               <button
                 onClick={nextSlide}
                 className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600"
               >
-                Next
+                Next ›
               </button>
             </div>
 

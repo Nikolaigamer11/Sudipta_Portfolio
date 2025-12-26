@@ -39,7 +39,7 @@ function Nav() {
 
         {/* DESKTOP NAV */}
         <div className="hidden md:flex justify-evenly w-full">
-          <NavLink className={linkClass} to="/">
+          <NavLink className={linkClass} exact to="/">
             Home
           </NavLink>
           <NavLink className={linkClass} to="/Book_Illustrations">
