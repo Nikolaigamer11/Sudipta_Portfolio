@@ -2,8 +2,8 @@ import React from "react";
 import {
   Traditional,
   Watercolor,
-  Graphics,
-  Paintings,
+  Poster,
+  Mural,
   Sets,
 } from "../components/images";
 import { NavLink } from "react-router-dom";
@@ -148,7 +148,7 @@ function Home() {
 
           <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
             {/* DESKTOP VIEW: Show only first 2 */}
-            {Graphics.slice(0, 3).map((item) => (
+            {Poster.slice(0, 3).map((item) => (
               <div key={`desktop-${item.id}`} className="hidden md:block">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -159,7 +159,7 @@ function Home() {
             ))}
 
             {/* MOBILE VIEW: Show first 4 + See More Card */}
-            {Graphics.slice(0, 6).map((item) => (
+            {Poster.slice(0, 6).map((item) => (
               <div key={`mobile-${item.id}`} className="block md:hidden">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -189,7 +189,7 @@ function Home() {
 
           <div className="grid grid-flow-col auto-cols-[minmax(260px,1fr)] gap-6 overflow-x-auto no-scrollbar">
             {/* DESKTOP VIEW: Show only first 2 */}
-            {Paintings.slice(0, 3).map((item) => (
+            {Mural.slice(0, 3).map((item) => (
               <div key={`desktop-${item.id}`} className="hidden md:block">
                 <ImageHoverCard
                   image={item.thumbnail}
@@ -200,7 +200,7 @@ function Home() {
             ))}
 
             {/* MOBILE VIEW: Show first 4 + See More Card */}
-            {Paintings.slice(0, 6).map((item) => (
+            {Mural.slice(0, 6).map((item) => (
               <div key={`mobile-${item.id}`} className="block md:hidden">
                 <ImageHoverCard
                   image={item.thumbnail}

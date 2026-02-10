@@ -48,14 +48,14 @@ function Nav() {
           <NavLink className={linkClass} to="/Other_Illustrations">
             Other Illustrations
           </NavLink>
-          <NavLink className={linkClass} to="/Graphic_Designs">
-            Graphic Desings
-          </NavLink>
           <NavLink className={linkClass} to="/Paintings">
             Paintings
           </NavLink>
           <NavLink className={linkClass} to="/Props">
             Prop & Set designs
+          </NavLink>
+          <NavLink className={linkClass} to="/Graphic_Designs">
+            Graphic Desings
           </NavLink>
           <NavLink className={linkClass} to="/Contact_me">
             Contact Me
@@ -93,13 +93,7 @@ function Nav() {
         >
           Other Illustrations
         </NavLink>
-        <NavLink
-          onClick={() => setOpen(false)}
-          className={linkClass}
-          to="/Graphic_Designs"
-        >
-          Graphic Designs
-        </NavLink>
+
         <NavLink
           onClick={() => setOpen(false)}
           className={linkClass}
@@ -113,6 +107,13 @@ function Nav() {
           to="/Props"
         >
           Props
+        </NavLink>
+        <NavLink
+          onClick={() => setOpen(false)}
+          className={linkClass}
+          to="/Graphic_Designs"
+        >
+          Graphic Designs
         </NavLink>
         <NavLink
           onClick={() => setOpen(false)}

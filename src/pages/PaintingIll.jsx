@@ -1,7 +1,7 @@
 import React from "react";
 import IllHeader from "../components/Ill_header";
 import Gallery from "../components/Gallery";
-import { Paintings } from "../components/images";
+import { Mural, Portion, Canvas, Sketch } from "../components/images";
 
 function PaintingIll() {
   return (
@@ -14,9 +14,12 @@ Acrylic, oil, watercolor and mixed media as well as I often used real elements s
 I also enjoy mural/wall art. So far I have painted murals in Chicago, IL , Alliance, OH and Brooklyn, NY.`}
       />
       <Gallery
-        images={Paintings}
-        txt={`Please click on  the images to zoom\n Paintings:-`}
+        images={Mural}
+        txt={`Please click on  the images to zoom\n Murals:-`}
       />
+      <Gallery images={Portion} txt={`Portions of Murals:-`} />
+      <Gallery images={Canvas} txt={`OilAcrylic on Canvas:-`} />
+      <Gallery images={Sketch} txt={`Sketches:-`} />
     </main>
   );
 }
