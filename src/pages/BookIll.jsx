@@ -13,11 +13,11 @@ function BookIll() {
 
       <Gallery
         images={Traditional}
-        txt={`Please Click the images to zoom \n Traditional Book Paintings:`}
+        txt={`Please Click the images to zoom \n Manual:`}
       />
-      <Gallery images={Digital} txt={`Digital Book Paintings:`} />
-      <Gallery images={Comic} txt={`Comic Book Paintings:`} />
-      <Gallery images={Adult_book} txt={`Adult Book Paintings:`} />
+      <Gallery images={Digital} txt={`Digital:`} />
+      <Gallery images={Comic} txt={`Comics:`} />
+      <Gallery images={Adult_book} txt={`Adult Books:`} />
     </main>
   );
 }

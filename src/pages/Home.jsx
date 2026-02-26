@@ -305,25 +305,25 @@ function Home() {
         <div className=" text-left my-5">
           <h5 className="text-[#5dcae9]">Client List:</h5>
           <p>
-            Google (Benelux), Artistic Gallery of Brooklyn (US), Piton Books
-            (Canada), Gillie & Marc Pty Ltd. (Australia), Zox (US), Editions
-            Photoguy (France), Clever Mind Series (Australia), Ground Tech Corp
-            (US), Studio WAS (Finland), Jamie Group (US), Zerbosch (Germany),
-            Gambet (Greece), Hero Fiction (US), Glenmeadow Shires (New Zeeland),
-            ACB Trophy (US), Dr. Tom Ferraro (US), Glenfiddch (Netherlands),
-            Parisa Business Consulting (US), DJ INC (Australia), Pet Design
-            (US), Sortiment AS (Norway), Rough Writer, INC. (US), Brynn Sugarman
-            (Israel), Colossal Adventure, F. Gillette (US), First Base Media
-            (US), Impact & Echo (Kuwait), SOS medical (US), Aura Creative (UAE),
-            Money Design LLC (US), Lycia K's cards (UK), Discovery Academy
-            (Canada), Nola Soft (US), Karaoki Entertainment (Austria), Anat
-            Umansky (Israel), Kid Emperor (US), Leviathan Production (US),
-            Hometown520Press (US and Spain), New Foundation Press (US), Tate
-            Publishing (US), Decorband (Australia), Web Page Testers (Brazil),
-            Calcoast Country (US), Meditas promotion firm (Istanbul),
-            Illustration Solution (US), Jersey Shore Cosmetics (US), H.Arm
-            (Holland), Tootle (Sweden), Bear Manor Media (Japan), Special
-            Learning LLC (US), Kyokushin karate Association (Australia),
+            Google (Benelux), Artistic Gallery of Brooklyn/HeyFrames (US) ,
+            Piton Books (Canada), Gillie & Marc Pty Ltd. (Australia), Zox (US),
+            Editions Photoguy (France), Clever Mind Series (Australia), Ground
+            Tech Corp (US), Studio WAS (Finland), Jamie Group (US), Zerbosch
+            (Germany), Gambet (Greece), Hero Fiction (US), Glenmeadow Shires
+            (New Zeeland), ACB Trophy (US), Dr. Tom Ferraro (US), Glenfiddch
+            (Netherlands), Parisa Business Consulting (US), DJ INC (Australia),
+            Pet Design (US), Sortiment AS (Norway), Rough Writer, INC. (US),
+            Brynn Sugarman (Israel), Colossal Adventure, F. Gillette (US), First
+            Base Media (US), Impact & Echo (Kuwait), SOS medical (US), Aura
+            Creative (UAE), Money Design LLC (US), Lycia K's cards (UK),
+            Discovery Academy (Canada), Nola Soft (US), Karaoki Entertainment
+            (Austria), Anat Umansky (Israel), Kid Emperor (US), Leviathan
+            Production (US), Hometown520Press (US and Spain), New Foundation
+            Press (US), Tate Publishing (US), Decorband (Australia), Web Page
+            Testers (Brazil), Calcoast Country (US), Meditas Promotion Firm
+            (Istanbul), Illustration Solution (US), Jersey Shore Cosmetics (US),
+            H.Arm (Holland), Tootle (Sweden), Bear Manor Media (Japan), Spcial
+            Learning LLC (US), Kyokushin Karate Association (Australia),
             Multilingual Group (US), AusDollar (Australia), Develop 4 Media Ltd
             (UK), Marketplace (US), Glasvezel (Holland), Net Kinetics (US &
             Philippines), Marcos Crespo (US), World Reach (US), Nati Dobkin
@@ -347,45 +347,49 @@ function Home() {
             (US), Clear Fork Publishing (US), Sticky's Adventures (US), K&E
             Enterprises (US), Books by Niya (US), Mascot Books (US), Steve
             Callahan (US), Christy Meyoli (US), Connection to Creativity (US),
-            Adventures of Aiden, LLC. (US), Steve Challahan (US), Lawrence
-            Sturdivant Jr. (US), Kirk Uejio (US), HeartString Productions, LLC.
-            (US), Krayzehouse Development Corporation (US), Viviane Moors
-            (Germany) Alve Kvåle (Norway), Heartstring Productions (US), Sarah
-            Butterworth/fremantle (UK), Pawflex (US), Jim Skiba (US), The Madden
-            Corporation (US)….. and many more.
+            Adventures of Aiden, LLC. (US), Lawrence Sturdivant Jr. (US), Kirk
+            Uejio (US), Erica Maina (US), Viviane Moors (Germany), Alve Kvåle
+            (Norway), Crossed Crow Books (US), Heartstring Productions (US),
+            Sarah Butterworth/fremantle (UK), Pawflex (US), Jim Skiba (US), The
+            Madden Corporation (US)….. and many more.
           </p>
         </div>
         <div className=" text-left my-5">
           <h5 className="text-[#5dcae9]">Participation: </h5>
           <ol className=" text-left list-decimal list-inside">
-            <li>
+            <ul>
               2001 - 2006 Annual Exhibition of Govt. College of Art & Craft
               (Kolkata, India) Certificate of Merit and Gopal Ghosh Memorial
               Scholarship.
-            </li>
-            <li>2005 Camlin Art Exhibition (Kolkata). </li>
-            <li>
+            </ul>
+            <ul>2005 Camlin Art Exhibition (Kolkata). </ul>
+            <ul>
               2005 International Art competition by Zee Bangla(India). 1st
               position
-            </li>
-            <li>2005 Indian Artists: Past, Present and Future (Kokata). </li>
-            <li>2005 Workshop with present famous Indian Illustrators. </li>
-            <li>
+            </ul>
+            <ul>2005 Indian Artists: Past, Present and Future (Kokata). </ul>
+            <ul>2005 Workshop with present famous Indian Illustrators. </ul>
+            <ul>
               2005 - 2006 Annual All India Fine Art Exhibition, Academy of Fine
               Arts.
-            </li>
-            <li>2006 Avantika Art Exhibition (Kolkata). Gold Medal. </li>
-            <li>2006 Agnipath Art Exhibition. (Delhi). Silver Medal. </li>
-            <li>2007 Akon Bakon art contest (Howrah). Gold Medal. </li>
-            <li>2008 “Embracing Our Differences” (Florida, USA) </li>
-            <li>2009 Group Show at Birla Art Academy (Kolkata, India).</li>
-            <li>
-              2016 Workshop at “The Highlights Foundation” (Pennsylvania, USA).
-            </li>
-            <li>
-              2017 Workshop at “The Highlights Foundation” with Scholarship.
-              (Pennsylvania, USA).
-            </li>
+            </ul>
+            <ul>2006 Avantika Art Exhibition (Kolkata). Gold Medal. </ul>
+            <ul>2006 Agnipath Art Exhibition. (Delhi). Silver Medal. </ul>
+            <ul>2007 Akon Bakon art contest (Howrah). Gold Medal. </ul>
+            <ul>2008 “Embracing Our Differences” (Florida, USA) </ul>
+            <ul>2009 Group Show at Birla Art Academy (Kolkata, India).</ul>
+            <ul>
+              2016 Workshop at The Highlights Foundation/ Boyds Mill with
+              Scholarship. (PA, USA).
+            </ul>
+            <ul>
+              2017 Workshop at The Highlights Foundation/ Boyds Mill with
+              Scholarship. (PA, USA).
+            </ul>
+            <ul>
+              2022 Workshop at The Highlights Foundation/ Boyds Mill with
+              Scholarship. (PA, USA).
+            </ul>
           </ol>
         </div>
       </section>
