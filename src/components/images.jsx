@@ -4,7 +4,6 @@ function createImageArray({ count, basePath, extension = "jpg", link }) {
     thumbnail: `${basePath}/${i + 1}.${extension}`,
     fullRes: `${basePath}/${i + 1}.${extension}`,
     link: `/${link}`,
-    title: `${i + 1}`,
   }));
 }
 
@@ -18,16 +17,18 @@ const MANUAL_REAL = 4;
 const VECTORS = 11;
 const ANIMATION_BACK = 5;
 const MANUAL = 31;
-const MISCELLANEOUS = 5;
+const MISCELLANEOUS = 10;
 const WATER_PAINTINGS = 11;
 const SET_NUM = 11;
 const BOOK = 20;
-const POSTER = 8;
+const POSTER = 6;
 const MURAL = 15;
 const PORTION = 20;
 const CANVAS = 12;
 const SKETCH = 5;
-
+const AIRSHOW = 4;
+const ADS = 3;
+const STORYBOARD = 10;
 // ------ Book illustrations -------
 
 const Traditional = createImageArray({
@@ -133,7 +134,7 @@ const Sets = createImageArray({
   count: SET_NUM,
   basePath: "/Sets",
   prefix: "Set Designs",
-  link: "Painting",
+  link: "Props",
 });
 
 const Book = createImageArray({
@@ -144,6 +145,24 @@ const Book = createImageArray({
 const Poster = createImageArray({
   count: POSTER,
   basePath: "/Graphic Designs/Hoarding and Poster",
+  link: "Graphic_Designs",
+});
+
+const AirShow = createImageArray({
+  count: AIRSHOW,
+  basePath: "/Graphic Designs/Air Show",
+  link: "Graphic_Designs",
+});
+
+const Ads = createImageArray({
+  count: ADS,
+  basePath: "/Graphic Designs/Ads",
+  link: "Graphic_Designs",
+});
+
+const Storyboard = createImageArray({
+  count: STORYBOARD,
+  basePath: "/Graphic Designs/Storyboard",
   link: "Graphic_Designs",
 });
 
@@ -167,4 +186,7 @@ export {
   Portion,
   Canvas,
   Sketch,
+  AirShow,
+  Ads,
+  Storyboard,
 };
