@@ -1,6 +1,15 @@
 import React from "react";
 import Gallery from "../components/Gallery";
-import { Ads, AirShow, Book, Poster, Storyboard } from "../components/images";
+import {
+  Ads,
+  AirShow,
+  Book,
+  Cards,
+  Logos,
+  Poster,
+  Showcard,
+  Storyboard,
+} from "../components/images";
 import IllHeader from "../components/Ill_header";
 
 function GraphicIll() {
@@ -14,8 +23,11 @@ function GraphicIll() {
         images={Book}
         txt={`Please click on the images to zoom \nBook Cover Designs:- `}
       />
-      <Gallery images={Ads} txt={`Press Ads and Magazine Ads:-`} />
+      <Gallery images={Cards} txt={`Greeting Card Designs:-`} />
       <Gallery images={Storyboard} txt={`Storyboard Designs:- `} />
+      <Gallery images={Ads} txt={`Press Ads and Magazine Ads:-`} />
+      <Gallery images={Logos} txt={`Logo Designs:-`} />
+      <Gallery images={Showcard} txt={`Manual Showcard Design:-`} />
       <Gallery images={Poster} txt={`Hoarding & Poster Designs:- `} />
       <Gallery images={AirShow} txt={`Plein Air Show:- `} />
     </main>

@@ -1,7 +1,7 @@
 import React from "react";
 import IllHeader from "../components/Ill_header";
 import Gallery from "../components/Gallery";
-import { Mural, Portion, Canvas, Sketch } from "../components/images";
+import { Mural, Portion, Canvas, Sketch, Board } from "../components/images";
 
 function PaintingIll() {
   return (
@@ -20,6 +20,7 @@ I also enjoy mural/wall art. So far I have painted murals in Chicago (IL), Allia
       <Gallery images={Portion} txt={`Portions of Murals:-`} />
       <Gallery images={Canvas} txt={`Oil and Acrylic on Canvas:-`} />
       <Gallery images={Sketch} txt={`Sketches:-`} />
+      <Gallery images={Board} txt={`Acrylic on board:-`} />
     </main>
   );
 }

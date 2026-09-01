@@ -20,8 +20,8 @@ const MANUAL = 31;
 const MISCELLANEOUS = 10;
 const WATER_PAINTINGS = 11;
 const SET_NUM = 11;
-const BOOK = 20;
-const POSTER = 6;
+const BOOK = 22;
+const POSTER = 9;
 const MURAL = 15;
 const PORTION = 20;
 const CANVAS = 12;
@@ -29,6 +29,11 @@ const SKETCH = 5;
 const AIRSHOW = 4;
 const ADS = 3;
 const STORYBOARD = 10;
+
+const SHOWCARD = 1;
+const LOGOS = 8;
+const CARDS = 20;
+const BOARD = 37;
 // ------ Book illustrations -------
 
 const Traditional = createImageArray({
@@ -124,6 +129,12 @@ const Canvas = createImageArray({
   link: "Painting",
 });
 
+const Board = createImageArray({
+  count: BOARD,
+  basePath: "/Paintings/Acrylic on board",
+  link: "Painting",
+});
+
 const Sketch = createImageArray({
   count: SKETCH,
   basePath: "/Paintings/Sketch",
@@ -166,6 +177,24 @@ const Storyboard = createImageArray({
   link: "Graphic_Designs",
 });
 
+const Showcard = createImageArray({
+  count: SHOWCARD,
+  basePath: "/Graphic Designs/Manual Show Card",
+  link: "Graphic_Designs",
+});
+
+const Logos = createImageArray({
+  count: LOGOS,
+  basePath: "/Graphic Designs/logos",
+  link: "Graphic_Designs",
+});
+
+const Cards = createImageArray({
+  count: CARDS,
+  basePath: "/Graphic Designs/Greeting Cards",
+  link: "Graphic_Designs",
+});
+
 export {
   Sets,
   Book,
@@ -189,4 +218,8 @@ export {
   AirShow,
   Ads,
   Storyboard,
+  Board,
+  Logos,
+  Cards,
+  Showcard,
 };
